@@ -11,15 +11,14 @@ import Foundation
 struct Character : Decodable {
     let name : String
     let culture : String
-    let titles : [Titles]
-    let aliases : [Aliases]
-    let power : Int = 0
-}
-
-struct Titles : Decodable {
-    let title : String
-}
-
-struct Aliases : Decodable {
-    let alias : String
+    let titles : [String]
+    let aliases : [String]
+//    let seasons
+    var power : String {
+        get {
+            var power = titles.count
+            power += aliases.count
+            return String(power)
+        }
+    }
 }
