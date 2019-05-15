@@ -12,11 +12,19 @@ class BatleViewController: UIViewController {
     
     let characterController = CharacterController()
     
-    // MARK: IBOutlets
+    // MARK: Northmen IBOutlets
     @IBOutlet weak var northmenNameLabel: UILabel!
     @IBOutlet weak var northmenAliasLabel: UILabel!
     @IBOutlet weak var northmenTitleLabel: UILabel!
     @IBOutlet weak var northmenPowerLabel: UILabel!
+    
+    // MARK: Southerner IBOutlets
+    
+    @IBOutlet weak var southernerNameLabel: UILabel!
+    @IBOutlet weak var southernerAliasLabel: UILabel!
+    @IBOutlet weak var southernerTitleLabel: UILabel!
+    @IBOutlet weak var southernerPowerLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +32,13 @@ class BatleViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func northmenButtonTapped(_ sender: Any) {
-        updateViews()
+        updateNorthmenViews()
+    }
+    @IBAction func southernerButtonTapped(_ sender: Any) {
+        updateSouthernerViews()
     }
     
-    func updateViews() {
+    func updateNorthmenViews() {
         let num = String(Int.random(in: 0 ... 2138))
         characterController.fetchCharacter(characterNumber: num) { (character) in
             DispatchQueue.main.async {
@@ -35,6 +46,18 @@ class BatleViewController: UIViewController {
                 self.northmenAliasLabel.text = character?.aliases[0]
                 self.northmenTitleLabel.text = character?.titles[0]
                 self.northmenPowerLabel.text = character?.power
+            }
+        }
+    }
+    
+    func updateSouthernerViews() {
+        let num = String(Int.random(in: 0 ... 2138))
+        characterController.fetchCharacter(characterNumber: num) { (character) in
+            DispatchQueue.main.async {
+                self.southernerNameLabel.text = character?.name
+                self.southernerAliasLabel.text = character?.aliases[0]
+                self.southernerTitleLabel.text = character?.titles[0]
+                self.southernerPowerLabel.text = character?.power
             }
         }
     }

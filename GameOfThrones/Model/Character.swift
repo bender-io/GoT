@@ -13,12 +13,30 @@ struct Character : Decodable {
     let culture : String
     let titles : [String]
     let aliases : [String]
-//    let seasons
+    let tvSeries : [String]
     var power : String {
         get {
-            var power = titles.count
-            power += aliases.count
+            var power = 1
+            if name != "" {
+                power += name.count
+            }
+            if titles[0] != "" {
+                power += (titles.count * 3)
+            }
+            if aliases[0] != "" {
+                power += (aliases.count * 2)
+            }
+            if tvSeries[0] != "" {
+                power += tvSeries.count
+            }
             return String(power)
+        }
+    }
+    var forceMultiplier : Int {
+        get {
+            let randomMultipler = Int.random(in: 1...100)
+            let forceMultiplier = Int(power) ?? 50 * randomMultipler
+            return forceMultiplier
         }
     }
 }
