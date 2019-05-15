@@ -57,7 +57,7 @@ class BatleViewController: UIViewController {
     
     func battleForThrone() {
         guard let northmenPower = northmenPowerLabel.text,
-        let southernerPower = southernerPowerLabel.text else { return }
+            let southernerPower = southernerPowerLabel.text else { return }
         
         let northernMultiplier = Int(northmenPower)! * (Int.random(in: 1...1000))
         let southernMultiplier = Int(southernerPower)! * (Int.random(in: 1...1000))
