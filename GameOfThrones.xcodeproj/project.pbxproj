@@ -10,7 +10,6 @@
 		565A57BC228BD27E00EB8E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A57BB228BD27E00EB8E97 /* AppDelegate.swift */; };
 		565A57BE228BD27E00EB8E97 /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A57BD228BD27E00EB8E97 /* BattleViewController.swift */; };
 		565A57C1228BD27E00EB8E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565A57BF228BD27E00EB8E97 /* Main.storyboard */; };
-		565A57C4228BD27E00EB8E97 /* GameOfThrones.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 565A57C2228BD27E00EB8E97 /* GameOfThrones.xcdatamodeld */; };
 		565A57C6228BD28000EB8E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 565A57C5228BD28000EB8E97 /* Assets.xcassets */; };
 		565A57C9228BD28000EB8E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565A57C7228BD28000EB8E97 /* LaunchScreen.storyboard */; };
 		565A57D3228BDC9600EB8E97 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A57D2228BDC9600EB8E97 /* Character.swift */; };
@@ -22,7 +21,6 @@
 		565A57BB228BD27E00EB8E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		565A57BD228BD27E00EB8E97 /* BattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		565A57C0228BD27E00EB8E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		565A57C3228BD27E00EB8E97 /* GameOfThrones.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameOfThrones.xcdatamodel; sourceTree = "<group>"; };
 		565A57C5228BD28000EB8E97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		565A57C8228BD28000EB8E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		565A57CA228BD28000EB8E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 		565A57D0228BD29400EB8E97 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				565A57C2228BD27E00EB8E97 /* GameOfThrones.xcdatamodeld */,
 				565A57BB228BD27E00EB8E97 /* AppDelegate.swift */,
 				565A57C5228BD28000EB8E97 /* Assets.xcassets */,
 				565A57C7228BD28000EB8E97 /* LaunchScreen.storyboard */,
@@ -185,7 +182,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				565A57BE228BD27E00EB8E97 /* BattleViewController.swift in Sources */,
-				565A57C4228BD27E00EB8E97 /* GameOfThrones.xcdatamodeld in Sources */,
 				565A57BC228BD27E00EB8E97 /* AppDelegate.swift in Sources */,
 				565A57D7228BDE0C00EB8E97 /* CharacterController.swift in Sources */,
 				565A57D3228BDC9600EB8E97 /* Character.swift in Sources */,
@@ -386,19 +382,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		565A57C2228BD27E00EB8E97 /* GameOfThrones.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				565A57C3228BD27E00EB8E97 /* GameOfThrones.xcdatamodel */,
-			);
-			currentVersion = 565A57C3228BD27E00EB8E97 /* GameOfThrones.xcdatamodel */;
-			path = GameOfThrones.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 565A57B0228BD27D00EB8E97 /* Project object */;
 }

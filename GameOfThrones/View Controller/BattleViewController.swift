@@ -10,6 +10,7 @@ import UIKit
 
 class BatleViewController: UIViewController {
     
+    // MARK: - Properties
     let characterController = CharacterController()
     
     // MARK: Northmen IBOutlets
@@ -19,14 +20,12 @@ class BatleViewController: UIViewController {
     @IBOutlet weak var northmenPowerLabel: UILabel!
     
     // MARK: Southerner IBOutlets
-    
     @IBOutlet weak var southernerNameLabel: UILabel!
     @IBOutlet weak var southernerAliasLabel: UILabel!
     @IBOutlet weak var southernerTitleLabel: UILabel!
     @IBOutlet weak var southernerPowerLabel: UILabel!
     
     // MARK: Throne IBOutlets
-    
     @IBOutlet weak var throneNameLabel: UILabel!
     @IBOutlet weak var throneAliasLabel: UILabel!
     @IBOutlet weak var throneTitleLabel: UILabel!
@@ -41,6 +40,7 @@ class BatleViewController: UIViewController {
     @IBAction func northmenButtonTapped(_ sender: Any) {
         updateNorthmenViews()
     }
+    
     @IBAction func southernerButtonTapped(_ sender: Any) {
         updateSouthernerViews()
     }
@@ -54,7 +54,7 @@ class BatleViewController: UIViewController {
         }
     }
     
-    
+    // MARK: - Methods
     func battleForThrone() {
         guard let northmenPower = northmenPowerLabel.text,
             let southernerPower = southernerPowerLabel.text else { return }
@@ -67,7 +67,7 @@ class BatleViewController: UIViewController {
     
     func updateThroneViews(northernMultiplier: Int, southernMultiplier: Int) {
         if northernMultiplier >= southernMultiplier {
-            print("the north wins")
+            print("the north wins \(northernMultiplier) to \(southernMultiplier)")
             throneNameLabel.text = northmenNameLabel.text
             throneAliasLabel.text = northmenAliasLabel.text
             throneTitleLabel.text = northmenTitleLabel.text
@@ -75,7 +75,7 @@ class BatleViewController: UIViewController {
             updateSouthernerViews()
             alertControllerDeclareWinnerNorth()
         } else {
-            print("the south wins")
+            print("the south wins \(southernMultiplier) to \(northernMultiplier)")
             throneNameLabel.text = southernerNameLabel.text
             throneAliasLabel.text = southernerAliasLabel.text
             throneTitleLabel.text = southernerTitleLabel.text
@@ -110,6 +110,7 @@ class BatleViewController: UIViewController {
     }
 }
 
+// MARK: - AlertControllers
 extension BatleViewController {
     
     func alertControllerNeedCharacter() {
@@ -123,7 +124,7 @@ extension BatleViewController {
     
     func alertControllerDeclareWinnerNorth() {
         let alertController = UIAlertController(title: "The North has won the Throne!", message: "Prepare to defend against the next usurper.", preferredStyle: .alert)
-        
+
         let okay = UIAlertAction(title: "I understand.", style: .default, handler: nil)
         alertController.addAction(okay)
         
